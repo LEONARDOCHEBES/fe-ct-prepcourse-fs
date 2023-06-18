@@ -1,5 +1,7 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
+const { createTrue } = require("typescript")
+
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
@@ -126,7 +128,7 @@ function multiplicarArgumentos() {
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
-   let contador=1
+   let contador=0
    for (let index = 0; index < array.length; index++) {
       if (array[index]>18) {
          contador++
@@ -141,18 +143,61 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+
+   switch (numeroDeDia) {
+      case 7:
+         return "Es fin de semana"
+         break;
+      case 1:
+         return "Es fin de semana"
+         break;
+      case 2:
+         return "Es dia laboral"
+         break;
+      case 3:
+         return "Es dia laboral"
+         break;
+      case 4:
+         return "Es dia laboral"
+         break;
+      case 5:
+         return "Es dia laboral"
+         break;
+      case 6:
+         return "Es dia laboral"
+         break;   
+      default:
+         break;
+   }
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+   //((num.toString()).charAt(0))
+   
+   if (((num.toString()).charAt(0))=="9") {
+      return true
+   }else{
+      return false
+   }
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+
+   for (let index = 0; index < array.length; index++) {
+      if (array[index]==array[index+1]) {
+         return true
+      }else{
+         return false
+      }
+    
+      
+   }
 }
 
 function mesesDelAño(array) {
@@ -160,18 +205,50 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+
+   nuevoArreglo=[]
+   for (let index = 0; index < array.length; index++) {
+      if ((array[index]=="Noviembre")||(array[index]=="Enero")||(array[index]=="Marzo")){
+         nuevoArreglo.push(array[index])
+         }else{
+            return "No se encontraron los meses pedidos"
+         }
+   }
+
+
+      return nuevoArreglo
 }
+
+
+
+
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+
+   tablaDeSeis=[]
+   for (let index = 0; index <= 10; index++) {
+      tablaDeSeis[index]=6*index
+      
+   }
+   return tablaDeSeis
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+
+   nuevoArreglo=[]
+   for (let index = 0; index < array.length; index++) {
+      if (array[index]>100) {
+         nuevoArreglo.push(array[index])
+      }
+      
+   }
+   return nuevoArreglo
 }
 
 /* ----------------------------------------------------------------------------------
@@ -185,6 +262,18 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+
+   arreglo=[]
+   for (let index = 0; index < 10; index++) {
+      if (num==index) {
+         return "Se interrumpió la ejecución"
+         
+         
+      }
+      arreglo.push(num+=2)
+      
+   }
+   return arreglo
 }
 
 function continueStatement(num) {
@@ -194,6 +283,18 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+   arreglo=[]
+   for (let index = 0; index < 10; index++) {
+
+      if (4!=index) {
+         arreglo.push(num+=2)
+      }
+      
+      
+   }
+   return arreglo
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
