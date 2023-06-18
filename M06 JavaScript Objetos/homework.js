@@ -60,30 +60,52 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
+   let res = objetoMisterioso.numeroMisterioso * 5
+   return res
 }
 
 function eliminarPropiedad(objeto, propiedad) {
    // El parámetro "propiedad" es una propiedad del objeto que recibes.
    // Debes eliminarla del objeto y retornarlo finalmente.
    // Tu código:
+   delete objeto [propiedad]
+   return objeto
 }
 
 function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+
+   if (objetoUsuario.hasOwnProperty('email')!=undefined) {
+      return true
+   }if (objetoUsuario.hasOwnProperty('email')==undefined){
+      return false
+   }
 }
 
 function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+
+   if (objeto.hasOwnProperty(propiedad)) {
+      return true
+   }else{
+      return false
+   }
 }
 
 function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+   if (objetoUsuario.hasOwnProperty(password)==password) {
+      return true
+   }else{
+      return false
+   }
+
 }
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
