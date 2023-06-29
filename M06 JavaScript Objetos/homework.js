@@ -77,9 +77,9 @@ function tieneEmail(objetoUsuario) {
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
 
-   if (objetoUsuario.hasOwnProperty('email')!=undefined) {
+   if (objetoUsuario.email!=undefined) {
       return true
-   }if (objetoUsuario.hasOwnProperty('email')==undefined){
+   }if (objetoUsuario.email==undefined){
       return false
    }
 }
@@ -100,7 +100,7 @@ function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   if (objetoUsuario.hasOwnProperty(password)==password) {
+   if (objetoUsuario.password==password) {
       return true
    }else{
       return false
@@ -169,13 +169,13 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-   let precioFinal
-   objetoProducto["calcularPrecioDescuento"]
+
+
    objetoProducto.calcularPrecioDescuento = function(){
-       precioFinal = this.precio - (this.precio * this.porcentajeDeDescuento);
+       let precioFinal = this.precio - (this.precio * this.porcentajeDeDescuento);
        return precioFinal;
       }
-      
+      return objetoProducto
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

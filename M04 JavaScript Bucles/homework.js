@@ -191,7 +191,7 @@ function tieneTresDigitos(num) {
    // Caso contrario, retornar false.
    // Tu código:
    
-   if (num.length ===3){
+   if (num.length ==3){
       return true
    }else if (num.length !=3){
       return false
